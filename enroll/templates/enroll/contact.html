@@ -1,0 +1,39 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5 text-white">
+  <div class="col-md-9 my-2">
+    <h1>Contact Us</h1>
+  </div>
+  <div class="col-md-9">
+    <form action="">
+      <div class="row">
+        <div class="form-group col-md-6 ">
+          <label for="i-name">Name*</label>
+          <input type="text" id="i-name" class="form-control">
+        </div>
+        <div class="form-group col-md-6 ">
+          <label for="i-email">Email*</label>
+          <input type="text" id="i-email" class="form-control" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12 ">
+          <label for="i-sub">Sunject</label>
+          <input type="text" id="i-sub" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-12 ">
+          <label for="i-comm">Query</label>
+          <textarea name="comment" id="i-comm" cols="30" rows="3" class="form-control" required></textarea>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-12">
+          <button class="btn btn-info px-4">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

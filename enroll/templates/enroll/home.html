@@ -1,0 +1,16 @@
+{% extends 'enroll/base.html' %}
+{% block title %}Welcome!{% endblock title %}
+{% block message %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    {% for post in posts  %}
+    <div class="jumbotron jumbotron-fluid  ">
+      <div class="container border border-warning">
+        <h1 class="display-4">{{post.title}}</h1>
+        <p class="lead">{{post.desc}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock message %}

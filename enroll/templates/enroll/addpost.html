@@ -1,0 +1,27 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row text-white">
+    <div class="col-md-7 text-center alert alert-info">
+      <h2>Add Post details Here</h2>
+    </div>
+    <div class="col-md-7 p-0 ">
+      <form action="" method="POST" class="form-group" novalidate>
+        {% csrf_token %}
+        {% for fm in form %}
+        <div class="mb-1">{{fm.label_tag}} {{fm}}<small class="error">{{fm.errors|striptags}}</small></div>
+        {% endfor %}
+        <div class="mt-3">
+          <input type="submit" value="Add Post" class="btn btn-success">
+          <a href="{% url 'dashboard' %}" class="btn btn-danger mx-2">Cancle</a>
+        </div>
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <p class="mt-4 alert alert-danger">{{error}}</p>
+        {% endfor %}
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

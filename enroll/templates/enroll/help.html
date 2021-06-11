@@ -1,0 +1,410 @@
+<!-- 
+    .container => to center any div
+    .container-fluid =>div for full screen
+    .row => to create row 
+    .col
+    .row-cols-(2,3..etc) =>this also need .row
+    .w-100 =>insde col to create break b/w col divs
+    .col-md, .col-sm, ... =>for resopnsive
+ -->
+<!-- Grid System
+    col-1 t0 col-12 =>
+    offset-(1,2,...)=>
+    offset-(md,lg,...)-(1,2,...)=>
+    order-(0-12,first, last)=>
+    order-(md,lg,...)(0-12,first, last)=>
+    Note: if we wand to use nesting coloumn then we have to first add a row class inside which we add other coloumns.
+-->
+<!-- Margin classes
+    .m-auto => to cemter any div 
+    .m-(sm,md..)-auto => to cemter any div 
+    .mr-auto =>
+    .mr(sm.md,..)-auto =>
+    .ml-auto =>
+    .ml(sm.md,..)-auto =>
+    .m-(0,1,2,...) => margin from all sides
+    .m-(sm,md..)-(0,1,2,...) => margin from all sides
+    same for .mr,.ml,.mt,.mb(0,1,2,...) 
+    .m-n(0,1,2,...) => -ve margin from all sides
+    .m-n(sm,md..)-(0,1,2,...) => -ve margin from all sides
+    same for .mr-n,.ml-n,.mt-n,.mb-n(0,1,2,...) 
+    .mx-(0,1,2..) => for left and right margin
+    .my-(0,1,2..) => for top and bottom margin
+    .no-gutters => remove all kind of margin
+-->
+<!-- Pdding 
+    .p-(0,1,2..) => padding form all side
+    .p-(sm,md,..)-(0,1,2..) => padding form all side
+    .pl,pr,pt,pb,- (0,1,2,..)=>
+    .px-(0,1,2..) => for left and right padding
+    .py-(0,1,2..) => for top and bottom padding
+    .no-gutters => remove all kind of padding
+ -->
+<!-- Horizontal Alignment
+    justify-content-center =>
+    justify-content-end =>
+    justify-content-start =>
+    justify-content-between =>
+    justify-content-around =>
+    Note: We can also create breakpoints eg. justify-content-md-center
+-->
+<!-- Vetical Alignment : items
+    align-items-start=>    
+    align-items-end=>    
+    align-items-center=>    
+    align-items-streach=>    
+    align-items-baseline=>    
+    Note: We can also create breakpoints eg.  align-items-md-center
+    
+    Vetical Alignment : content 
+    align-content-center =>
+    align-content-end =>
+    align-content-start =>
+    align-content-between =>
+    align-content-around =>
+    Note: there must be a height
+    Note: We can also create breakpoints eg.  align-content-md-center
+    
+    Vetical Alignment : self 
+    align-self-auto => work acornding to parent class
+    align-self-center =>
+    align-self-end =>
+    align-self-start =>
+    align-self-strach =>
+    align-self-baseline =>
+    Note: there must be a height
+    Note: We can also create breakpoints eg.  align-self-md-center
+-->
+<!-- Flex Direction 
+    .flex-row =>
+    .flex-row-reverse =>
+    .flex-column =>
+    .flex-column-reverse =>
+    .flex-wrap =>
+    .flex-nowrap =>
+    .flex-wrap-reverse =>
+    .flex-fill=> It works only with simple col classes
+    Note: We can also create breakpoints eg. .flex-row-md-reverse
+-->
+<!-- Display
+    .d-none =>
+    .d-inline
+    .d-inline-block
+    .d-block
+    .d-table
+    .d-table-cell
+    .d-table-row
+    .d-flex
+    .d-inline-flex
+    Note: We can also create breakpoints eg. .d-md-inline-block
+
+    Display: Print
+    .d-print-none =>
+    .d-print-inline
+    .d-print-inline-block
+    .d-print-block
+    .d-print-table
+    .d-print-table-cell
+    .d-print-table-row
+    .d-print-flex
+    .d-print-inline-flex
+    Note: We can also create breakpoints eg. .d-print-md-inline-block
+-->
+<!-- Float, ClearFix, Width and Height
+    .clearfix
+    .float-none =>
+    .float-left =>
+    .float-right =>
+    Note: breakpoints are also available
+    .w-25 => it will create a div of 25% widht of its parent
+    .w-50 => it will create a div of 50% widht of its parent
+    .w-75 => it will create a div of 75% widht of its parent
+    .w-100 => it will create a div of 100% widht of its parent
+    .w-auto =>
+    .wm(m=max)-100;=>
+    same of Height Eg. .h-75
+    Viewport height
+    .vh-100 =>
+    .min-vh-100 =>
+    .vw-100 =>
+    .min-vw-100 =>
+-->
+<!-- Position and Overflow
+    .position-static =>
+    .position-relative =>
+    .position-absolute =>
+    .position-fixed =>
+    .position-sticky =>
+     
+    .fixed-top =>
+    .fixed-bottom =>
+    .sticky-top =>
+
+    Overflow
+    .overflow-auto =>
+    .overflow-hidden =>
+    Note : we use overflow when there is a given height of a div   
+-->
+<!-- Color Classes :Background
+     .bg-primary =>
+     .bg-secondary =>
+     .bg-success =>
+     .bg-danger =>
+     .bg-warning =>
+     .bg-info =>
+     .bg-light =>
+     .bg-dark =>
+     .bg-white =>
+
+     Text
+    text-primary =>
+    text-secondary =>
+    text-success =>
+    text-danger =>
+    text-warning =>
+    text-info =>
+    text-light bg-dark =>
+    text-dark =>
+    text-muted =>
+    text-white bg-dark =>
+-->
+<!-- Text Alignment Classes
+    .text-left =>
+    .text-right =>
+    .text-center =>
+    .text-justify => tihs is not reponsive
+    Note: We can add breakpoints too for eg. text-md-left.
+
+    Text Transform Classes 
+    .text-lowercase =>
+    .text-uppercase =>
+    .text-capitalize =>
+
+    Font Weight Classes
+    .font-weight-bold =>
+    .font-weight-bolder =>
+    .font-weight-light =>
+    .font-weight-lighter =>
+    .font-weight-normal =>
+    .font-italic =>
+
+    Font Family
+    .text-monospace
+
+    For Anchor Tag
+    .text-decoration-none =>
+    .text-reset =>
+    
+    Wraping long text
+    .text-nowrap =>
+    .text-teuncate =>
+    .text-break =>
+
+-->
+<!-- Font size 
+     
+    .display-1 =>
+    .display-2 =>
+    .display-3 =>
+    .display-4 =>
+    .lead => little increase in size
+
+    List Style
+
+    .list-unstyled => applied in ul tag
+    .list-inline => applied in ul tag
+
+    Classes of Testemonials
+    .blockquote =>
+    .blockquote-footer =>
+
+    User Select Classes
+    .user-select-all =>
+    .user-select-auto =>
+    .user-select-none => restrict to copy text
+-->
+<!-- Button Classes
+     ***    
+    .btn => compersary of follwing 
+     ***
+    .btn-primary =>
+    .btn-secondary =>
+    .btn-success =>
+    .btn-danger =>
+    .btn-warning =>
+    .btn-info =>
+    .btn-light =>
+    .btn-dark =>
+    .btn-link =>
+ 
+    Burron Outline Classes
+    .btn-outline-primary =>
+    .btn-outline-secondary =>
+    .btn-outline-success =>
+    .btn-outline-danger =>
+    .btn-outline-warning =>
+    .btn-outline-info =>
+    .btn-outline-light =>
+    .btn-outline-dark =>
+    .btn-outline-link =>
+
+    Button Sizes
+    .btn-lg =>
+    .btn-small =>
+    .btn-block =>
+    .active =>
+    .disable =>
+ 
+    Button Groups
+    .btn-group  => create buttons inside a div they will act as grop button
+    .btn-group-sm =>
+    .btn-group-lg =>
+
+    Dropdown Menu
+    .dropdown-toggle => apply this on button for getting arrow and set data-toogle="dropdown"
+    .dropdown-toggle-split => apply this on button for getting arrow and set data-toogle="dropdown"
+    .dropown-menu => create menu apply it on a div
+    .dropdown-item => apply it on anchor tag
+-->
+<!-- List 
+    .list-group =>
+    .list-group-flush =>
+    .list-group-item =>
+    .list-group-horizontal-{sm|md|..} =>
+    .list-group-item-action =>
+
+    Color
+    .list-group-item-light =>
+    .list-group-item-primary =>
+    .list-group-item-danger =>
+    .list-group-item-warning =>
+    .list-group-item-succes =>
+-->
+<!-- Table 
+    .table => apply on table tag
+    .table-dark => apply on table tag
+    .table-borderless => apply on table tag
+    .table-bordered => apply on table tag
+    .table-striped => apply on table tag
+    .table-sm => apply on table tag
+
+    .thead-dark => apply on thead tag
+    .thead-light => apply on thead tag
+
+    For Color
+    .table-border{primary, danger,..} => applyed on table tag only
+    .table-{primary, danger,..} => applyed on tr tag only
+    .bg-{primary, danger,..} => applyed on tr tag only
+
+    .table-responsive-{sm|md|lg|xl}=>
+    .align-top => apply on tr,td
+    .align-middle => apply on tr,td
+    .align-bottom => apply on tr,td
+    .align-baseline => apply on tr,td
+-->
+<!-- Pagination and Breadcrumb
+     .pagination-{sm|lg} => Apply on ul which sholud be under a nav tag
+     .page-item => 
+     .page-link => 
+     .active => apply on li tag
+     .disabled => apply on li tag
+
+     .breadcrumb => Apply on ol which sholud be under a nav tag
+     .bradcrumb-item => Apply on li under ol
+-->
+<!-- Form
+    .form-group-{sm|lg}=> apply it on div
+    .form-control => apply on form tags{input, select etc.}
+    .form-control-file => apply on form tags{input, select etc.}
+    .form-control-range => apply on form tags{input, select etc.}
+    .form-text => give idea about input feild
+
+    .from-check =>apply on div aunedr dic having class form-group(us instead of form control)
+    .form-check-lable => lable of check items
+    .from-radio =>apply on div aunedr dic having class form-group(us instead of form control)
+    .form-radio-lable =>lable of RADIO items
+    
+    .form-inline => apply it on form
+    .form-check-inline => apply with form check on form
+    .form-radio-inline => apply with form radio on form
+
+    *** Custom Classes ***
+    .custom-select => for select
+    
+    .custom-file =>for image on div
+    .custom-file-label =>
+    .custom-file-input =>
+
+    .custom-control and .costom-switch|custom-checkbox|custom-radio => on div , for radio and checkbox
+    .custom-controle-label =>
+    .custom-controle-input =>
+-->
+<!-- Input Group nad Nav
+    .input-group-{sm|lg} => on div
+    .input-group-append => on div under above div
+    .input-group-prepend => on div under above div
+    .input-group-text =>on spna tag 
+
+    Nav
+    .nav => applied on ul or nav tag
+    .nav-pill => used with .nav
+    .nav-fill => used with .nav
+    .nav-justified => used with .nav
+    .nav-item =>
+    .nav-link =>
+
+    Navbar
+    .navbar navbar-dark bg-dark navbar-expand-{sm|md} => on nav tag
+    .navbar-nav => for ul of nav
+
+    Navbar Toggle
+    .navbar-tooglee =>
+    .navbar-tooglee-icon =>
+    .collapse =>
+    .navbar-collapse =>
+-->
+<!-- Image
+    .img-fluid-{sm|lg|circle|top|bottom|left|right|pill} =>
+    .img-thumbnail =>
+    .rounded =>
+    .figure => on main div
+    .figure-img => on imgtag under div
+    .figure-captio => on figcaption
+-->
+<!-- Border & Shadow
+    .border-{top|left..} =>
+    .border-{top|left..}-0 => 
+    Colors are also available eg .border-primary but .boreder class is madatory
+    .shadow-{none|sm|lg}
+-->
+<!-- Card and Media and Badge
+    .card => on div
+    .card-img-{bottom|top}  =>
+    .card-{header|footer} =>
+    .card-header-pills
+    .card-body, card-img-overlay=>
+        .card-title =>
+        .card-subtitle =>
+        .card-text =>
+    .card-group, card-deck =>
+    .card-column =>
+
+    .media =>
+    .media-body =>
+
+    .badge =>
+    .badge-pill => apply it on span tag
+    .badge-{primary|warning..}
+-->
+<!-- Progress Bar and Spinner
+    .progress => on main div
+    .progress-bar => under main div
+    .progress-bar-striped =>
+    .progress-bar-animated =>
+
+    .spinner-border =>
+    .spinner-grow =>
+
+    .jumbotron =>
+-->
+<!--  -->

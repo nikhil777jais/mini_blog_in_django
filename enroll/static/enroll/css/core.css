@@ -1,0 +1,10 @@
+body{
+  background: #585858;
+}
+.jumbotron{
+  background-color: #585858;
+  color: rgb(255, 255, 255);
+}
+.error{
+  color: rgb(179, 255, 0);
+}
