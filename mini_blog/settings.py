@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 from django.contrib.messages import constants as messages
 
 
@@ -22,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-crylq_5f#8ktt##nlu=5v-v6^x*v!&--wxps3(bvsevzvmgk2f'
+SECRET_KEY = os.environ['SECRET_KEY']  # secret key changed
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["miniblogtest.herokuapp.com", "localhost"] #allowe host changed
 
 
 # Application definition
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # middleware added
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -72,18 +74,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mini_blog.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mini_blog',
-        'USER':'root',
-        'PASSWORD':'root',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.postgresql', #DB changed tp postgreSQL
+        'NAME': 'd2rosf4d29e9tc',
+        'HOST':'ec2-34-199-15-136.compute-1.amazonaws.com',
+        'USER':'nwrivyibydcywy',
+        'PASSWORD':'369bc43904f2e22d8409f2e6f31c2ca92522fca7dfd545e8820e7dd08bf0f0f3',
+        'PORT':'5432',
     }
 }
 
@@ -125,6 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOt = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
